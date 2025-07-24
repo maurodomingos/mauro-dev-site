@@ -1,0 +1,123 @@
+<!-- contato.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Mauro Dev</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init('9rRXtxPHhf-m8zUnF'); // Substitua pelo seu Public Key se mudar
+    })();
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: white;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #22c55e;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    .contact-info a {
+      color: #22c55e;
+      text-decoration: none;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="contact" class="section">
+    <h2>Entre em Contato</h2>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Seu nome" required>
+      <input type="email" name="reply_to" placeholder="Seu email" required>
+      <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <div class="contact-info" style="margin-top: 20px;">
+      <p>Email: <a href="mailto:maurodomingos1996@gmail.com">maurodomingos1996@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/351931624107" target="_blank">+351 931 624 107</a></p>
+    </div>
+  </section>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/351931624107" class="whatsapp-button" target="_blank" title="Fale comigo no WhatsApp">💬</a>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_f5b4mid', 'template_xxxxxx', this) // Substituir pelo seu template real
+        .then(function() {
+          alert('Mensagem enviada com sucesso! Obrigado por entrar em contato.');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Erro ao enviar a mensagem. Verifica a conexão ou tenta mais tarde.');
+          console.error('Erro no envio:', error);
+        });
+    });
+  </script>
+
+</body>
+</html>
