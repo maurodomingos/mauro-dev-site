@@ -4,10 +4,111 @@
   <meta charset="UTF-8">
   <title>Serviços - Mauro Dev</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
+      color: #222;
+    }
+    header {
+    background: linear-gradient(to right, #1d3557, #457b9d);
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .servicos-page {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .intro h1 {
+      font-size: 36px;
+      color: #1d3557;
+    }
+    .intro p {
+      font-size: 18px;
+      color: #555;
+    }
+    .servicos-detalhados {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .servico {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .servico:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    }
+    .servico i {
+      color: #1d3557;;
+      margin-bottom: 15px;
+    }
+    .servico h2 {
+      color: #1d3557;
+    }
+    .servico p {
+      color: #333;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+    .chamada {
+      background: #457b9d;
+      padding: 50px;
+      color: white;
+      text-align: center;
+      margin-top: 60px;
+      border-radius: 20px;
+    }
+    .chamada .btn {
+      background: #fff;
+      color: #1d3557;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">Mauro Dev</div>
+    <div class="logo">🚀 Mauro Dev</div>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -19,19 +120,58 @@
     </nav>
   </header>
 
-  <main style="padding:40px; text-align:center;">
-    <h2>Serviços Oferecidos</h2>
-    <ul style="list-style: none; padding: 0; font-size:18px;">
-      <li>✅ Desenvolvimento Web</li>
-      <li>✅ Aplicações Mobile com AI</li>
-      <li>✅ Soluções Low Code e No Code</li>
-      <li>✅ Análise e Gestão de Sistemas</li>
-      <li>✅ Automatização de Processos</li>
-    </ul>
+  <main class="servicos-page">
+    <section class="intro">
+      <h1>💼 Serviços Profissionais</h1>
+      <p>Explora soluções digitais de alto impacto para acelerar o crescimento do teu negócio e conquistar o mundo online com confiança e inovação.</p>
+    </section>
+
+    <section class="servicos-detalhados">
+      <div class="servico">
+        <i class="fas fa-globe fa-3x"></i>
+        <h2>Desenvolvimento Web</h2>
+        <p>Sites elegantes, modernos e responsivos, prontos para impressionar os teus clientes desde o primeiro clique.</p>
+        <p><strong>Ideal para:</strong> empresas, empreendedores, portfólios e comércio online.</p>
+      </div>
+
+      <div class="servico">
+        <i class="fas fa-mobile-alt fa-3x"></i>
+        <h2>Apps com Inteligência Artificial</h2>
+        <p>Aplicações móveis com recursos inteligentes para automatizar tarefas, personalizar experiências e inovar o teu serviço.</p>
+        <p><strong>Ideal para:</strong> startups, empresas digitais e negócios que querem se destacar.</p>
+      </div>
+
+      <div class="servico">
+        <i class="fas fa-cogs fa-3x"></i>
+        <h2>Low Code & No Code</h2>
+        <p>Soluções desenvolvidas rapidamente com plataformas visuais e baixo custo de manutenção.</p>
+        <p><strong>Ideal para:</strong> projetos ágeis, MVPs e automações empresariais.</p>
+      </div>
+
+      <div class="servico">
+        <i class="fas fa-database fa-3x"></i>
+        <h2>Ciência de Dados & Big Data</h2>
+        <p>Análise de grandes volumes de dados com foco em decisões estratégicas e insights poderosos.</p>
+        <p><strong>Ideal para:</strong> bancos, e-commerce, educação e setor público.</p>
+      </div>
+
+      <div class="servico">
+        <i class="fas fa-robot fa-3x"></i>
+        <h2>Automatização de Processos</h2>
+        <p>Eliminação de tarefas manuais e repetitivas com fluxos automatizados e tecnologia de IA.</p>
+        <p><strong>Ideal para:</strong> aumentar produtividade e reduzir custos operacionais.</p>
+      </div>
+    </section>
+
+    <section class="chamada">
+      <h2>🚀 Pronto para impulsionar a tua empresa com tecnologia?</h2>
+      <a href="contato.html" class="btn">Solicitar Orçamento</a>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Mauro Alfredo Domingos.</p>
+    <p>&copy; 2025 Mauro Alfredo Domingos. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
+
